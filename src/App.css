@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
-}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+}
+
+.wrapper .drawer {
+  width: 25%;
+  height: 100%;
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+
+  background-color: #ccc;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.wrapper .drawer img {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 60px;
+}
+
+.wrapper .drawer input {
+  width: 75%;
+  height: 32px;
+
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+.wrapper .drawer button {
+  width: 75%;
+  height: 32px;
+
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+
+  transition: 0.2s;
+
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper .drawer button:hover:not(:disabled) {
+  opacity: 0.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper .drawer button:disabled {
+  background-color: gray;
+  color: black;
+}
+
+.wrapper .drawer div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .drawer div strong {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.wrapper .content {
+  width: 75%;
+  padding: 32px;
+  overflow: auto;
+}
+
+.wrapper .content table {
+  border-spacing: 0;
+}
+
+.wrapper .content table caption {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.wrapper .content table th {
+  background: #ccc;
+  padding: 8px 12px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.wrapper .content table th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.wrapper .content table th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.wrapper .content table td {
+  background: white;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+
+  padding: 12px 8px;
+}
+
+.wrapper .content table td:first-child {
+  text-align: left;
+}
+
+.wrapper .content table tbody tr {
+  opacity: 0.7;
+}
+
+.wrapper .content table tbody tr:hover {
+  opacity: 1;
 }
